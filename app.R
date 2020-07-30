@@ -84,7 +84,7 @@ ui <- pageWithSidebar(
                 p(""),
                 p("This tool is for reference only. Consult your PSD or CPPA for actual 
                    TLA reimbursement rates."),
-                p("Effective 01 May 2020 - updated 30 April 2020"),
+                p("Effective 01 July 2020 - updated 29 June 2020"),
                 p("Only rates within the past 12 months are included in this app."),
                 p("Report errors to: brandon.strain@fe.navy.mil")
                 ), # end sidebarpanel
