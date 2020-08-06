@@ -1,12 +1,3 @@
----
-title: "TLA Calculator"
-output: github_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ## TLA Calculator
 
 This application lets users calculate Temporary Lodging Allowance (TLA) in accordance with the Defense Travel Management Office (DTMO) instruction found here: https://www.defensetravel.dod.mil/Docs/perdiem/Computing_TLA.pdf
