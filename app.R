@@ -44,6 +44,11 @@ mie_getter <- function(lodging.date, location.date.row){
 ui <- pageWithSidebar(
                headerPanel("OCONUS TLA Calculator"),
                sidebarPanel(
+                 p(""),
+                 p("Note: The app is only updated through October 2020. Any dates
+                 outside of the range October 2019 to October 2020 will show as
+                 NA."),
+                 p(""),
                  tableOutput("entitlementsTable"),
                  checkboxInput(inputId = "svmPresent",
                              label = "Service Member Present",
@@ -62,8 +67,8 @@ ui <- pageWithSidebar(
                               value = FALSE),
                 dateRangeInput(inputId = "dates", 
                           label = "Check-In and Check-Out Dates",
-                          start = Sys.Date(),
-                          end = Sys.Date() + 1,
+                          start = "2020-06-01",
+                          end = "2020-06-05",
                           separator = "to"),
                 numericInput(inputId = "actualLodging",
                              label = "Actual Lodging Cost (Including Taxes) Per Day",
@@ -71,6 +76,7 @@ ui <- pageWithSidebar(
                              min = 0.00),
                 selectInput(inputId = "stateCountry",
                             label = "State / Country",
+                            selected = 1,
                             choices = perdiemrates.df$`State/Country`),
                 uiOutput("citySelector"),
                 a(href = "https://www.defensetravel.dod.mil/site/perdiemCalc.cfm",
@@ -84,7 +90,7 @@ ui <- pageWithSidebar(
                 p(""),
                 p("This tool is for reference only. Consult your PSD or CPPA for actual 
                    TLA reimbursement rates."),
-                p("Effective 01 October 2020 - updated 30 September 2020"),
+                p("Effective 01 November 2020 - updated 01 November 2020"),
                 p("Only rates within the past 12 months are included in this app.")
                 ), # end sidebarpanel
     mainPanel = tableOutput('ratesTable')
@@ -98,6 +104,7 @@ server <- function(input, output) {
 output$citySelector <- renderUI({
   selectInput(inputId = "Location",
               label = "City",
+              selected = 1,
               choices = perdiemrates.df$Location[which(
                 perdiemrates.df$`State/Country` == input$stateCountry)])
   })
