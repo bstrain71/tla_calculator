@@ -1,4 +1,9 @@
 # TLA Calculator
+This app was created as a demonstration project and has been allowed to lapse.
+It has not been updated since October 2020. If you would like for this app to
+be updated please open an issue and I will be happy to update it if there is a
+user base.
+
 App access (limited hours): https://bstrain71.shinyapps.io/oconus_tla_calculator/
 
 Per Diem Rates Data Source: https://www.defensetravel.dod.mil/site/perdiemCalc.cfm
